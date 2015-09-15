@@ -1,10 +1,13 @@
 {
   "name": "beerkit",
   "version": "1.0.0",
-  "description": "BeerKit",
+  "description": "Boilerplate framework for NodeJS web applications",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "beerkit": "bin/beerkit.js"
   },
   "repository": {
     "type": "git",
@@ -13,6 +16,7 @@
   "dependencies": {
     "catbox-redis": "^1.0.5",
     "colors": "^0.6.2",
+    "commander": "^2.7.1",
     "good": "^6.1.3",
     "good-console": "5.0.0",
     "good-file": "^5.0.1",
@@ -20,6 +24,7 @@
     "handlebars-layouts": "^2.0.2",
     "hapi": "^8.5.0",
     "hapi-mongodb": "^3.0.0",
+    "inquirer": "^0.8.0",
     "moment": "^2.10.6",
     "node-dir": "*",
     "node-sass": "^3.1.2",

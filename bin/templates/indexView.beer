@@ -1,0 +1,16 @@
+{{#extend "layout"}}
+
+  {{#content "body"}}
+
+    <h2>Welcome!</h2>
+
+  {{/content}}
+
+  {{#content "javascript"}}
+    <script type="text/javascript">
+      // Here you can include javascript-files that will show up in the bottom of the DOM
+      // Or just add simple javascript as console.log('Hello, I\'m not drunk!');
+    </script>
+  {{/content}}
+
+{{/extend}}

@@ -1,0 +1,21 @@
+exports.register = function (plugin, options, next) {
+
+  plugin.route([
+    {
+      method: 'GET',
+      path: '/login',
+      config: {
+        handler: function (req, rep) {
+          rep.view('login');
+        }
+      }
+    }
+  ]);
+
+  next();
+
+};
+
+exports.register.attributes = {
+  pkg: require('./package.json')
+};

@@ -1,0 +1,9 @@
+{
+  "name": "My Plugin",
+  "version": "1.0.0",
+  "description": "My plugin for BeerKit",
+  "main": "myplugin.js",
+  "mainRequire": "myplugin",
+  "author": "BeerKit",
+  "license": "MIT"
+}

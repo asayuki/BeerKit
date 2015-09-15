@@ -1,0 +1,29 @@
+require('beerkit')(function(start) {
+
+  this.port = '8000';
+
+  this.logging = {
+    file: true,
+    console: true
+  };
+
+  this.mongodb = {
+    url: 'mongodb://localhost:27017/mysite',
+    settings: {
+      db: {
+        'native_parser': false
+      }
+    }
+  };
+
+  this.sessions = {
+    redis: {
+      name: 'myCache',
+      host: 'localhost',
+      partition: 'sitecache'
+    }
+  };
+
+  start();
+
+});
