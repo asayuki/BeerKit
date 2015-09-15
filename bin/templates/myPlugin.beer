@@ -3,10 +3,10 @@ exports.register = function (plugin, options, next) {
   plugin.route([
     {
       method: 'GET',
-      path: '/login',
+      path: '/',
       config: {
         handler: function (req, rep) {
-          rep.view('login');
+          rep.view('index');
         }
       }
     }

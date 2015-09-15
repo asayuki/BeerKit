@@ -55,7 +55,7 @@ app
   .action(function(env, options) {
 
     if (fs.existsSync(dirname + "/package.json")) {
-      console.log("\nVodkaKit".white.bold+" will create a directory structure in this project, and add new settings\nto your package.json file.\n");
+      console.log("\nBeerKit".white.bold+" will create a directory structure in this project, and add new settings\nto your package.json file.\n");
 
       inquirer.prompt([
         {

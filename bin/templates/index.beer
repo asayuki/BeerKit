@@ -7,22 +7,22 @@ require('beerkit')(function(start) {
     console: true
   };
 
-  this.mongodb = {
+  /*this.mongodb = {
     url: 'mongodb://localhost:27017/mysite',
     settings: {
       db: {
         'native_parser': false
       }
     }
-  };
+  };*/
 
-  this.sessions = {
+  /*this.sessions = {
     redis: {
       name: 'myCache',
       host: 'localhost',
       partition: 'sitecache'
     }
-  };
+  };*/
 
   start();
 
