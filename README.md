@@ -10,7 +10,7 @@ A Hapi version of [VodkaKit](https://github.com/Arood/VodkaKit).
 
         npm install -g beerkit
 
-2.  Create a new project folder and `cd` into id
+2.  Create a new project folder and `cd` into it
 
         mkdir myProject && cd myProject
 
@@ -63,7 +63,7 @@ Install the npm-modules `node-sass` and `watch` and enter the following (or simi
         "build:css": "node-sass --output-style nested assets/scss/style.scss -o frontend/statics/",
         "watch:css": "watch \"npm run build:css\" assets/scss/",
 
-Then you can either run `npm run watch:css` to watch for changes and compile css, or just run `npm run build:css` just to build it once.
+Then you can either run `npm run watch:css` to watch for changes and compile css, or just run `npm run build:css` to build it once.
 
 ## Plugins
 
