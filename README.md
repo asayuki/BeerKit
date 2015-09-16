@@ -2,6 +2,8 @@
 
 A Hapi version of [VodkaKit](https://github.com/Arood/VodkaKit).
 
+<p style="text-align: center"><img src="https://cdn.rawgit.com/asayuki/BeerKit/master/beerkit.png" height="400" style="height: 566px" /></p>
+
 ## Getting started
 
 1.  Install BeerKit globally
@@ -109,6 +111,19 @@ mainfile.js
       pkg: require('./package.json')
     };
 
+### Load other plugins
+
+If you want to load plugins that you have installed with npm or they are in another directory you can use `this.loadPlugins`
+
+Example:
+
+    this.loadPlugins([
+      {
+        register: require('plugin-to-load'),
+        options: {}
+      }
+    ]);
+
 ## Routes
 
 If you want to add route(s) without having to involve Plugins you can just add a callbackfunction to start in `index.js`.
@@ -140,6 +155,8 @@ TODO
 ### this.statics
 
 ### this.plugins
+
+### this.loadPlugins
 
 ### this.logging
 
