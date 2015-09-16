@@ -15,7 +15,7 @@ var createBeerKit = function() {
   packagejson.scripts.production = "NODE_ENV=production ./node_modules/nodemon/bin/nodemon.js --ignore assets --ignore frontend index.js";
 
   if (!packagejson.dependencies) { packagejson.dependencies = {} };
-  packagejson.dependencies.beerkit = "^1.0.0";
+  packagejson.dependencies.beerkit = "^1.0.1";
   packagejson.dependencies.nodemon = "^1.3.7";
 
   fs.mkdirSync(dirname+"/assets");
@@ -26,8 +26,7 @@ var createBeerKit = function() {
   fs.mkdirSync(dirname+"/backend/plugins/myPlugin");
   fs.mkdirSync(dirname+"/logs");
   fs.mkdirSync(dirname+"/frontend");
-  fs.mkdirSync(dirname+"/frontend/javascripts");
-  fs.mkdirSync(dirname+"/frontend/stylesheets");
+  fs.mkdirSync(dirname+"/frontend/statics");
   fs.mkdirSync(dirname+"/frontend/views");
 
   fs.writeFileSync(dirname+"/index.js", fs.readFileSync(__dirname+"/templates/index.beer"));
@@ -35,10 +34,6 @@ var createBeerKit = function() {
   fs.writeFileSync(dirname+"/backend/plugins/myPlugin/package.json", fs.readFileSync(__dirname+"/templates/myPluginPackage.beer"));
   fs.writeFileSync(dirname+"/frontend/views/index.html", fs.readFileSync(__dirname+"/templates/indexView.beer"));
   fs.writeFileSync(dirname+"/frontend/views/layout.html", fs.readFileSync(__dirname+"/templates/layoutView.beer"));
-
-  fs.writeFileSync(dirname+"/assets/javascript/script.js", "");
-  fs.writeFileSync(dirname+"/assets/scss/style.scss", "");
-
   fs.writeFileSync(dirname+"/package.json", JSON.stringify(packagejson, null, 2));
 
   console.log("\nDone!".white.bold+" The last step is to install required dependencies by running "+"npm install".underline+". \nThen start your server by running "+"npm start".underline+".");
