@@ -150,18 +150,54 @@ TODO
 
 ### this.port
 
+`(int)` Port that the application will listen to. Defaults to `process.env.PORT` and `8000
+
 ### this.views
+
+`(string)` Path to view/templates files. Defaults to `./frontend/views`
 
 ### this.statics
 
+`(string)` Path to static assets. Defaults to `./frontend/statics`
+
 ### this.plugins
+
+`(string)` Path to your plugins. Defaults to `./backend/plugins`
 
 ### this.loadPlugins
 
+`(array)` Array with objects that loads external plugins. [Example here.](#load-other-plugins)
+
 ### this.logging
+
+`(object)` This property should be an object with one or both of the following keys:
+
+* `this.logging.file` `(bool)` - Set to true if you want to log errors to file. Logpath is `./logs/app-good.log`. Default is false
+* `this.logging.console` `(bool)` - Set to true if you want to log requests and errors in console. Default is false
 
 ### this.mongodb
 
+`(object)` If defined, BeerKit will setup a Mongo-instance. Ths property should be and object with the following keys:
+
+* `url` - Hostname to the MongoDB-server. Example: `mongodb://localhost:27017/beerkit`
+
+To use MongoDB in your route-handlers use
+* `var db = req.server.plugins['hapi-mongodb'].db;` - To get access the database
+* `var ObjectID = req.server.plugins['hapi-mongodb'].ObjectID;` - To get access to the ObjectID-function
+
 ### this.sessions
 
-### start
+`(object)` If defined, BeerKit will setup a Redis-instance where it will save your sessions. This property should be and object with the following key and subkeys:
+
+* `redis` `(object)`
+ * `name` `(string)` - Name of your session
+ * `host` `(string)` - Hostname to the redis-server
+ * `partition` `(string)` - Partition on the redis-server
+
+To use caching, check [this tutorial](http://hapijs.com/tutorials/caching) on hapijs.com
+
+### start(callback)
+
+`(function)` Method to start your server.
+
+* `callback` - If you use callback function you can set your own routes etc. without having to create a plugin. Check the (Routes)[#routes] section for this.
