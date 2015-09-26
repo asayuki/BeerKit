@@ -146,8 +146,6 @@ You can change it to:
 
 ## Reference
 
-TODO
-
 ### this.port
 
 `(int)` Port that the application will listen to. Defaults to `process.env.PORT` and `8000
