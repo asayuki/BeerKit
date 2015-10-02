@@ -117,12 +117,12 @@ If you want to load plugins that you have installed with npm or they are in anot
 
 Example:
 
-    this.loadPlugins([
+    this.loadPlugins = [
       {
         register: require('plugin-to-load'),
         options: {}
       }
-    ]);
+    ];
 
 ## Routes
 
@@ -175,9 +175,7 @@ You can change it to:
 
 ### this.mongodb
 
-`(object)` If defined, BeerKit will setup a Mongo-instance. Ths property should be and object with the following keys:
-
-* `url` - Hostname to the MongoDB-server. Example: `mongodb://localhost:27017/beerkit`
+`(string)` If defined, BeerKit will setup a Mongo-instance. Example: `mongodb://localhost:27017/beerkit`
 
 To use MongoDB in your route-handlers use
 * `var db = req.server.plugins['hapi-mongodb'].db;` - To get access the database

@@ -7,14 +7,7 @@ require('beerkit')(function(start) {
     console: true
   };
 
-  /*this.mongodb = {
-    url: 'mongodb://localhost:27017/mysite',
-    settings: {
-      db: {
-        'native_parser': false
-      }
-    }
-  };*/
+  //this.mongodb = 'mongodb://localhost:27017/mysite';
 
   /*this.sessions = {
     redis: {
