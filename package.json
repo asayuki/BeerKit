@@ -1,6 +1,6 @@
 {
   "name": "beerkit",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "Boilerplate framework for NodeJS web applications",
   "main": "index.js",
   "scripts": {
